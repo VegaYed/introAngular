@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LogginObject } from '../dto/logginObject';
+import { Session } from '../dto/session';
 import { LoginService } from '../service/login.service';
 
 @Component({
@@ -10,11 +11,13 @@ import { LoginService } from '../service/login.service';
 export class LoginComponent implements OnInit {
 
   logginObject: LogginObject = new LogginObject();
+  session : Session = new Session();
 
   logear(){
     this.loginSer.logear(this.logginObject).subscribe(
       (resp) =>{
-        alert('logeado');
+        this.session = resp;
+        alert(this.session.token)
       },(error) =>{
         alert('error');
       }
