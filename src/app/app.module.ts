@@ -7,12 +7,14 @@ import { PersonaComponent } from './persona/persona.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonaComponent,
     ListaComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
