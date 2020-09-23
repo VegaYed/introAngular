@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "introAngular"
+    }
+  },
+  "defaultProject": "introAngular",
+  "cli": {
+    "analytics": false
+  }
 }

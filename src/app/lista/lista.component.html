@@ -1,0 +1,21 @@
+<p>lista works!</p>
+
+<table>
+    <thead>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Direccion</th>
+        <th>Ciudad</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of personas">
+            <td>{{persona.nombre}}</td>
+            <td>{{persona.apellido}}</td>
+            <td>{{persona.direccion}}</td>
+            <td>{{persona.ciudad}}</td>
+        </tr>
+    </tbody>
+</table>
