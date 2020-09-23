@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ListaComponent } from './lista/lista.component';
 import { MenuComponent } from './menu/menu.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
     PersonaComponent,
     ListaComponent,
     MenuComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
