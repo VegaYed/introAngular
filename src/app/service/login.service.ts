@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { LogginObject } from '../dto/logginObject';
+import { Session } from '../dto/session';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +22,10 @@ export class LoginService {
     }else{
       return true;
     }
+  }
+
+  setSession(session: Session){
+    localStorage.setItem('session_token', session.token);
   }
 
 }

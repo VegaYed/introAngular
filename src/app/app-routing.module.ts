@@ -9,7 +9,6 @@ const routes: Routes = [
   {path: 'lista', component: ListaComponent, canActivate: [AuthGuard]},
   {path: 'persona', component: PersonaComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent}
-
 ];
 
 @NgModule({
