@@ -16,12 +16,7 @@ export class LoginService {
   }
 
   isLogged():boolean{
-    const token = localStorage.getItem('session_token');
-    if(token == null){
-      return false;
-    }else{
-      return true;
-    }
+    return localStorage.getItem('session_token') != null;;
   }
 
   setSession(session: Session){
