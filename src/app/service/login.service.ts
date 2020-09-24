@@ -11,7 +11,16 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   logear(loginObject:LogginObject): Observable<any>{
-    return this.http.post("https://c299d9925373.ngrok.io/login", loginObject);
+    return this.http.post('http://localhost:8000/login', loginObject);
+  }
+
+  isLogged():boolean{
+    const token = localStorage.getItem('session_token');
+    if(token == null){
+      return false;
+    }else{
+      return true;
+    }
   }
 
 }

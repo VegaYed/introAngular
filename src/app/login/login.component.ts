@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     this.loginSer.logear(this.logginObject).subscribe(
       (resp) =>{
         this.session = resp;
+        localStorage.setItem('session_token',this.session.token);
         alert(this.session.token)
       },(error) =>{
         alert('error');
